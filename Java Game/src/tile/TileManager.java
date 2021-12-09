@@ -28,7 +28,7 @@ public class TileManager {
 		
 		getTileImage();
 		
-		loadMap("/maps/map01.txt");
+		loadMap("/res/maps/map01.txt");
 	}
 	
 	public void getTileImage() {
@@ -49,7 +49,7 @@ public class TileManager {
 		
 		try {
 			tile[index] = new Tile();
-			tile[index].image = ImageIO.read(getClass().getResourceAsStream("/tiles/"+ imageName +".png"));
+			tile[index].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/"+ imageName +".png"));
 			tile[index].image = uTool.scaleImage(tile[index].image, gp.tileSize, gp.tileSize);
 			tile[index].collision = collision;
 			
